@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aqi-SS-FXb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ScanQR Code-->
+        <scene sceneID="h1h-V9-E4L">
+            <objects>
+                <viewController storyboardIdentifier="ScanQRCode" id="aqi-SS-FXb" customClass="ScanQRCode" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cbb-0j-sDo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jv6-9A-F0A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g1j-mg-LqO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="la3-qI-rP5" userLabel="QR Code View">
+                                <rect key="frame" x="20" y="40" width="335" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Start! to read QR code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-G3-vX9">
+                                        <rect key="frame" x="10" y="139.5" width="315" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="aDr-G3-vX9" firstAttribute="centerX" secondItem="la3-qI-rP5" secondAttribute="centerX" id="AJA-rk-7Zi"/>
+                                    <constraint firstItem="aDr-G3-vX9" firstAttribute="leading" secondItem="la3-qI-rP5" secondAttribute="leading" constant="10" id="HI9-I9-uDo"/>
+                                    <constraint firstItem="aDr-G3-vX9" firstAttribute="centerY" secondItem="la3-qI-rP5" secondAttribute="centerY" id="KoU-oe-JJD"/>
+                                    <constraint firstAttribute="trailing" secondItem="aDr-G3-vX9" secondAttribute="trailing" constant="10" id="VCI-x4-Nlr"/>
+                                    <constraint firstAttribute="height" constant="350" id="baG-Br-cEp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0AO-aI-jK4" userLabel="Result View">
+                                <rect key="frame" x="0.0" y="390" width="375" height="229"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR code reader isn't reading yet" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNM-A5-zPd">
+                                        <rect key="frame" x="30" y="102.5" width="315" height="24"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LNM-A5-zPd" firstAttribute="centerY" secondItem="0AO-aI-jK4" secondAttribute="centerY" id="FA8-7v-3KS"/>
+                                    <constraint firstAttribute="trailing" secondItem="LNM-A5-zPd" secondAttribute="trailing" constant="30" id="Gup-fc-9g7"/>
+                                    <constraint firstItem="LNM-A5-zPd" firstAttribute="centerX" secondItem="0AO-aI-jK4" secondAttribute="centerX" id="mra-sN-HLT"/>
+                                    <constraint firstItem="LNM-A5-zPd" firstAttribute="leading" secondItem="0AO-aI-jK4" secondAttribute="leading" constant="30" id="woB-W8-ZYD"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa5-kL-ggm">
+                                <rect key="frame" x="10" y="619" width="355" height="48"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.37647058820000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressStart:" destination="aqi-SS-FXb" eventType="touchUpInside" id="cFb-jz-cY4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="la3-qI-rP5" firstAttribute="leading" secondItem="g1j-mg-LqO" secondAttribute="leading" constant="20" id="10o-31-cs1"/>
+                            <constraint firstItem="0AO-aI-jK4" firstAttribute="top" secondItem="la3-qI-rP5" secondAttribute="bottom" id="4lE-7F-1zh"/>
+                            <constraint firstItem="la3-qI-rP5" firstAttribute="top" secondItem="Cbb-0j-sDo" secondAttribute="bottom" constant="20" id="Bwl-R5-cXE"/>
+                            <constraint firstItem="Xa5-kL-ggm" firstAttribute="leading" secondItem="g1j-mg-LqO" secondAttribute="leading" constant="10" id="M5O-UV-kob"/>
+                            <constraint firstItem="Jv6-9A-F0A" firstAttribute="top" secondItem="Xa5-kL-ggm" secondAttribute="bottom" id="NXO-v4-M1l"/>
+                            <constraint firstAttribute="trailing" secondItem="0AO-aI-jK4" secondAttribute="trailing" id="a3F-cc-AIx"/>
+                            <constraint firstItem="0AO-aI-jK4" firstAttribute="leading" secondItem="g1j-mg-LqO" secondAttribute="leading" id="aaU-rL-LJm"/>
+                            <constraint firstAttribute="trailing" secondItem="Xa5-kL-ggm" secondAttribute="trailing" constant="10" id="kXR-pF-w0J"/>
+                            <constraint firstItem="0AO-aI-jK4" firstAttribute="bottom" secondItem="Xa5-kL-ggm" secondAttribute="top" id="tsG-Bz-oI8"/>
+                            <constraint firstAttribute="trailing" secondItem="la3-qI-rP5" secondAttribute="trailing" constant="20" id="y8g-7N-GYC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="Xa5-kL-ggm" id="egV-hS-W3h"/>
+                        <outlet property="lblGuidance" destination="aDr-G3-vX9" id="Kmi-6G-iFK"/>
+                        <outlet property="lblResult" destination="LNM-A5-zPd" id="LEd-KE-uLd"/>
+                        <outlet property="viewQRCode" destination="la3-qI-rP5" id="Ofx-NM-XPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Auc-Mw-G0l" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>

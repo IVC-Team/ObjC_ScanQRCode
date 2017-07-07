@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tgI-EM-lRb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rhO-3V-MOd">
+            <objects>
+                <navigationController id="tgI-EM-lRb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="40A-ND-fbp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ROK-ar-oUg" kind="relationship" relationship="rootViewController" id="ynA-6a-7LZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXI-UK-F6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="183"/>
+        </scene>
+        <!--List Detail QR Code-->
+        <scene sceneID="AP4-Zo-JL6">
+            <objects>
+                <viewController storyboardIdentifier="ScreenTableView" id="ROK-ar-oUg" customClass="ScreenTableView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a3F-Y6-x6w"/>
+                        <viewControllerLayoutGuide type="bottom" id="1HE-Sd-S6k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tag-5P-liN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qIr-98-oNt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="97O-Cf-ozO">
+                                <rect key="frame" x="46" y="625" width="283" height="42"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.37647058820000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Scanning QR Code">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressScanningQRCode:" destination="ROK-ar-oUg" eventType="touchUpInside" id="pgo-mH-Grz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qIr-98-oNt" secondAttribute="trailing" id="JU0-kX-gf0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="97O-Cf-ozO" secondAttribute="trailing" constant="30" id="VSx-84-wB5"/>
+                            <constraint firstItem="97O-Cf-ozO" firstAttribute="leading" secondItem="tag-5P-liN" secondAttribute="leadingMargin" constant="30" id="XL8-0R-7xS"/>
+                            <constraint firstItem="qIr-98-oNt" firstAttribute="leading" secondItem="tag-5P-liN" secondAttribute="leading" id="c7b-gq-fuU"/>
+                            <constraint firstItem="qIr-98-oNt" firstAttribute="top" secondItem="tag-5P-liN" secondAttribute="top" id="cZZ-D5-Rik"/>
+                            <constraint firstItem="97O-Cf-ozO" firstAttribute="top" secondItem="qIr-98-oNt" secondAttribute="bottom" constant="20" id="gKB-SL-QHC"/>
+                            <constraint firstItem="1HE-Sd-S6k" firstAttribute="top" secondItem="97O-Cf-ozO" secondAttribute="bottom" id="nCJ-zV-SQn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="List Detail QR Code" id="Qpz-xh-Acc"/>
+                    <connections>
+                        <outlet property="btnScanningQRCode" destination="97O-Cf-ozO" id="1I4-Rc-rq1"/>
+                        <outlet property="tableView" destination="qIr-98-oNt" id="MhH-qq-FWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMI-a3-OBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42.399999999999999" y="182.15892053973016"/>
+        </scene>
+    </scenes>
+</document>
